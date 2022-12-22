@@ -1,0 +1,2 @@
+fixupdate = sabit güncelleme saniyede
+update pc fps ine göre

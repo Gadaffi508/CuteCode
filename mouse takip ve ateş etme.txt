@@ -1,0 +1,36 @@
+serial
+private transform gun(player);
+float angle;
+float donus hızı = 5f;
+
+update { Rotadeğiştir();  }
+
+void rotadeğiştir()
+{
+	vector2=direction = Camera.main.ScreenToWorldPoint(Input.mousePosition)-gun.transform.position;
+angle = Mathf.Atan2(direciton.y,direction.x)*Mathf.Rad2Deg-90f;
+mermiat();
+Quaternion rotation = Quaternion.AngleAxis(angle,Vector3.forward);
+gun.transform.rotation=Quaternion.Slerp(gun.transform.rotation,rotation,donushizi*time.deltatime);;
+}
+
+
+mermiye rigidbody ekle
+gravity = 0;      collider ekle;   prefab yap;
+serail game object mermiprefabs yap karekter içine gameobject oluştur
+nereden çıkacağına seç gameobjecti
+serial transform mermiYeri oluşturur.
+void mermiat()  
+gameobject mermi=Instantiate(mermiprefab,mermiyeri.position,mermiyeri.rotation) as gameobject; 
+
+
+mermi hızı için script yap
+update içine transfor.translate(vector3.up(yukarı)*time.deltatime*mermihızı);
+start içine mermi çıktıktan 3saniye sonra silme.
+if(this.gameobject!=null) destroy(this.gameogject,3f);
+
+ikimermi arası süre koyma
+float ikimermi arası süre = 200f; float sonrakiatis;
+
+if(time.time>sonrakiatis) sonrakiatis=time.time+ikimermiarasısure/1000f;
+mermiat(); üstekini bunun içine atıyoruz

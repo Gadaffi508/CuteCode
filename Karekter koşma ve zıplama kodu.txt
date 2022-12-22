@@ -1,0 +1,38 @@
+2d oyun
+Rigidbody2D rb;
+
+void start()
+{
+	rb = GetComponent<>(Rigidbody2D);
+}
+
+void update()
+{
+	yatayhareket = Input.GetAxis("Horizontal");
+	rb.velocity = new Vector2(yatayhareket*harekethızı*60*Time.Deltatime,rb.velocity.y);
+
+if(Input.GetKeyDown(KeyCode.Space))
+{
+	rb.velocity = new Vector2(yatayhreket*harekethızı*Time.Deltatime,zıplamahızı*250*Time.deltatime)
+
+}
+
+	Vector2 yeniscale = transform.localScale;
+
+	if(yatayhareket>0)
+	{
+		yeniScale.x = "karekterboyutu";
+	}
+	if(yatayhareket<0)
+	{
+		yeniScale.x = -"karekterboyutu";
+	}
+
+	transform.localScale = yeniscale;
+}
+
+3d obje ok tuşları ile hareket etme
+void içine
+xInput = Input.GetAxis("Horizontal"); 0 1 dödürür
+zInput = Input.GetAxis("Vertical"); 0 1 döndürür
+başta xInput ve zInput float olarak tanımlıyoruz

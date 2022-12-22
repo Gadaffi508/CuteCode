@@ -1,0 +1,8 @@
+vector2 = x ve y kapsar
+vector3 = x,y ve z kapsar
+
+
+objenin otamatik dönme
+başta speed belirliyoruz
+update içine
+transform.rotate(Vector3.forward * speed * time.deltatime);

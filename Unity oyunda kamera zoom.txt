@@ -1,0 +1,29 @@
+private float _camSize;
+private Camera cam;
+private float minSize;
+private float maxSize;
+
+start içine cam=getcomponent;
+start içine _camSize = cam.orthographhicSize;
+update içine Zoom();
+
+private void Zoom()
+{
+	if(Math.Abs(cam.orthographhicSize-_camSize)>0.1)
+	{
+	float change = Math.Lerp(cam.orthographhicSize,_camSize,Time.DeltaTime*2);
+	
+	cam.orthographhicSize = change;	
+	}
+
+	if(Input.mouseScrollDelta.y > y && _camSize > minSize)
+	{
+		_camSize -= 1;
+	}
+	else if(Input.mouseScrollDelta.y < y && _camSize > maxSize)
+	{
+		_camSize += 1;
+	}
+}
+
+max=8    min=3 yapabilirsin

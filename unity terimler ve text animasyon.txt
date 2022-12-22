@@ -1,0 +1,19 @@
+veriables, değerleri ve nesnelere referansları tutar 
+(nesneleri "daha büyük" değişkenler olarak görebilirsiniz).
+ Kullanmamız için bir şeyler tutan bir kutu gibiler.
+ Değişkenler küçük harfle başlar.
+
+functions, bu değişkenleri karşılaştıran ve işleyen kod 
+koleksiyonlarıdır. Fonksiyonlar büyük harfle başlar. Kodu,
+ programın farklı bölümlerinde birden çok kez kolayca yeniden
+ kullanılabilmesi için işlevlerde düzenliyoruz.
+
+
+classes, bir nesnenin özelliklerini tanımlayan bir şablon
+ oluşturmak için değişken ve işlev koleksiyonlarını bir araya
+ getirmek için kodu yapılandırmanın bir yoludur.
+ Komut dosyası oluşturma, öncelikle bu nesneleri ve mevcut
+ durumlarını ve değerlerini karşılaştırır. Bir sonucu veya
+ çözümü belirleyen mantığa dayanır.
+
+using.DG.Tweening == birde indirmen gerek.

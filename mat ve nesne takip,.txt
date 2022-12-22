@@ -1,0 +1,13 @@
+math.floor(20.2f); = sayıyı en küçük değere yuvarlama
+math.ceil(20.2f); = sayıyı en büyük değere yuvarlama
+math.round(20.2f); = sayıyı sondaki değere göre yuvarlama 5yukarı 5aşağı
+math.max(5,3); = 5  math.min(5,3); = 3
+
+
+
+nesne takip 
+public gameobject ""; = tırnak yerine isim
+float hız;
+
+update{transform.position = vector3.Movetowards(transform.position,
+"".transform.position,time.deltatime*hız)}

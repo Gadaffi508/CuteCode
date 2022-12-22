@@ -1,0 +1,7 @@
+oncollisionenter
+{
+	if(collision.collider.name=="Obje")
+	{
+		destroy
+	}
+}

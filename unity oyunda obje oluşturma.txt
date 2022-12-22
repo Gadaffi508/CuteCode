@@ -1,0 +1,18 @@
+public Gameobject ball; = oluşturmak istediğimiz obje
+public Transform spawnPoint; = objenin nerde oluşturduğumuzu seçme
+void spawnBall() içine
+Instantiate(ball,spawnPoint.position,Quaternion.identity);
+Quaternion.identity = dörtlü nokta
+void start() içine de spawnBall(); yerleştiriyoruz update de yapabiliriz bize kalmış
+
+
+void start();
+içine InvokeRepeating("fonksiyon",1f,2f);
+fonskiyonunu 2f de bir çalıştırma
+void spawnBall() içine
+float randomX = Random.Range(-maxX,maxX);
+float randomz = Random.Range(-maxZ,maxZ);
+Vector3 = randomSpawnPos = new Vector(randomX,10f,randomZ);
+Instantiante(ball,randomSpawnPos,Quaternion.identity);
+
+burdaki kodda ball objemizi belirlediğimiz yerlerde otamatik oluşturma
