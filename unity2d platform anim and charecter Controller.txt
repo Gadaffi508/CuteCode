@@ -1,0 +1,53 @@
+using UnityEngine;
+
+public class PlayerController : MonoBehaviour
+{
+    public float jumpPower = 10f;
+    bool isJumping = false;
+    public Rigidbody2D rb;
+    float movement;
+    public float speed;
+    SpriteRenderer rbRenderer;
+    Animator anim;
+    void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+        rbRenderer = GetComponent<SpriteRenderer>();
+        anim=GetComponent<Animator>();
+    }
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space) && !isJumping)
+        {
+            isJumping = true;
+            rb.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
+            anim.SetBool("İsTrigger",true);
+        }
+        movement = Input.GetAxis("Horizontal");
+        if (movement>0.01f)
+        {
+            rbRenderer.flipX= true;
+            anim.SetFloat("movement",movement);
+        }
+        else if(movement < 0.01f)
+        {
+            rbRenderer.flipX = false;
+            anim.SetFloat("movement", -movement);
+        }
+    }
+    private void FixedUpdate()
+    {
+        transform.Translate(movement*speed*Time.deltaTime,0,0);
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("ground"))
+        {
+            isJumping = false;
+            anim.SetBool("İsTrigger",false);
+        }
+    }
+}
+
+
+
